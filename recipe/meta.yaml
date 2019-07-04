@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/haven_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/haven/haven_{{ version }}.tar.gz
-  sha256: c0a1cf1b039549fb3ad833f9644ed3f142790236ad755d2ee7bd3d8109e3ae74
+  sha256: 90bcb4e7f24960e7aa3e15c06b95cd897f08de149cec43fd8ba110b14526068a
 
 build:
   merge_build_host: True  # [win]
