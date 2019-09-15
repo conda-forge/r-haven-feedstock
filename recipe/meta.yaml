@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,6 +37,7 @@ requirements:
     - r-hms
     - r-readr >=0.1.0
     - r-tibble
+    - libiconv
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -54,6 +55,7 @@ test:
 about:
   home: http://haven.tidyverse.org, https://github.com/tidyverse/haven, https://github.com/WizardMac/ReadStat
   license: MIT
+  license_file: LICENSE
   summary: Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.
   license_family: MIT
 
