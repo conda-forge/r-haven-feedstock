@@ -55,6 +55,7 @@ test:
 about:
   home: http://haven.tidyverse.org, https://github.com/tidyverse/haven, https://github.com/WizardMac/ReadStat
   license: MIT
+  license_file: LICENSE
   summary: Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.
   license_family: MIT
 
