@@ -1,0 +1,8 @@
+--- src/Makevars.orig	2019-09-15 09:14:58.833433857 +0200
++++ src/Makevars	2019-09-15 09:15:09.469235085 +0200
+@@ -8,4 +8,4 @@
+ 
+ PKG_CFLAGS = -Ireadstat -DHAVE_ZLIB
+ PKG_CXXFLAGS = -Ireadstat -DHAVE_ZLIB
+-PKG_LIBS = -lz
++PKG_LIBS = -lz -liconv

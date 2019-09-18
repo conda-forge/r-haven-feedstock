@@ -11,10 +11,12 @@ source:
     - {{ cran_mirror }}/src/contrib/haven_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/haven/haven_{{ version }}.tar.gz
   sha256: 90bcb4e7f24960e7aa3e15c06b95cd897f08de149cec43fd8ba110b14526068a
+  patches:
+    - r-haven-libiconv.patch
 
 build:
   merge_build_host: True  # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
