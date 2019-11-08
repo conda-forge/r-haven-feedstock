@@ -38,7 +38,9 @@ requirements:
     - r-forcats >=0.2.0
     - r-hms
     - r-readr >=0.1.0
+    - r-rlang
     - r-tibble
+    - r-tidyselect
     - libiconv
   run:
     - r-base
@@ -47,7 +49,9 @@ requirements:
     - r-forcats >=0.2.0
     - r-hms
     - r-readr >=0.1.0
+    - r-rlang
     - r-tibble
+    - r-tidyselect
 
 test:
   commands:
@@ -57,9 +61,11 @@ test:
 about:
   home: http://haven.tidyverse.org, https://github.com/tidyverse/haven, https://github.com/WizardMac/ReadStat
   license: MIT
-  license_file: LICENSE
   summary: Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
