@@ -1,4 +1,4 @@
-{% set version = '2.1.1' %}
+{% set version = "2.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +10,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/haven_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/haven/haven_{{ version }}.tar.gz
-  sha256: 90bcb4e7f24960e7aa3e15c06b95cd897f08de149cec43fd8ba110b14526068a
+  sha256: 199ee9b14e1ff70a0b0c3b9ce33dfdec8ed3b5e857a2a36bfb82e78a7b352d3d
   patches:
     - r-haven-libiconv.patch
 
 build:
   merge_build_host: True  # [win]
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -38,7 +38,9 @@ requirements:
     - r-forcats >=0.2.0
     - r-hms
     - r-readr >=0.1.0
+    - r-rlang
     - r-tibble
+    - r-tidyselect
     - libiconv
   run:
     - r-base
@@ -47,7 +49,9 @@ requirements:
     - r-forcats >=0.2.0
     - r-hms
     - r-readr >=0.1.0
+    - r-rlang
     - r-tibble
+    - r-tidyselect
 
 test:
   commands:
@@ -57,9 +61,11 @@ test:
 about:
   home: http://haven.tidyverse.org, https://github.com/tidyverse/haven, https://github.com/WizardMac/ReadStat
   license: MIT
-  license_file: LICENSE
   summary: Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
