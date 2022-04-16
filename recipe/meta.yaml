@@ -24,7 +24,7 @@ build:
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-rcpp                     # [build_platform != target_platform]
+    - r-cpp11                    # [build_platform != target_platform]
     - r-readr                    # [build_platform != target_platform]
     - r-tibble                   # [build_platform != target_platform]
     - r-rlang                    # [build_platform != target_platform]
@@ -42,24 +42,29 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-rcpp >=0.11.4
+    - r-cli >=3.0.0
+    - r-cpp11
     - r-forcats >=0.2.0
     - r-hms
+    - r-lifecycle
     - r-readr >=0.1.0
-    - r-rlang
+    - r-rlang >=0.4.0
     - r-tibble
     - r-tidyselect
-    - libiconv
+    - r-vctrs >=0.3.0
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-rcpp >=0.11.4
+    - r-cli >=3.0.0
+    - r-cpp11
     - r-forcats >=0.2.0
     - r-hms
+    - r-lifecycle
     - r-readr >=0.1.0
-    - r-rlang
+    - r-rlang >=0.4.0
     - r-tibble
     - r-tidyselect
+    - r-vctrs >=0.3.0
 
 test:
   commands:
