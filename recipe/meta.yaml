@@ -1,4 +1,4 @@
-{% set version = "2.5.1" %}
+{% set version = "2.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/haven_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/haven/haven_{{ version }}.tar.gz
-  sha256: 9f40462097a0b1cf3831bca493851fe4a6b3570d957a775ca81940f241c50a70
+  sha256: 2131fb0377ae1beffae54bf4beb8b3a876e9b6b9841a5acc39a2a2615023561d
   #patches:
   #  - r-haven-libiconv.patch
 
