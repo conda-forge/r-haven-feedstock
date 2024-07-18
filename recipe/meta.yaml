@@ -1,6 +1,5 @@
 {% set version = "2.5.4" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-haven
@@ -15,8 +14,7 @@ source:
   #  - r-haven-libiconv.patch
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,7 +30,9 @@ requirements:
     - r-hms                      # [build_platform != target_platform]
     - r-forcats                  # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -54,7 +54,6 @@ requirements:
     - r-vctrs >=0.3.0
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-cli >=3.0.0
     - r-cpp11
     - r-forcats >=0.2.0
