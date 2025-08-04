@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-haven-feedsto
 About r-haven
 -------------
 
-Home: http://haven.tidyverse.org, https://github.com/tidyverse/haven, https://github.com/WizardMac/ReadStat
+Home: http://haven.tidyverse.org, https://github.com/WizardMac/ReadStat
 
 Package license: MIT
 
 Summary: Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.
+
+Development: https://github.com/tidyverse/haven
 
 About r-haven
 -------------
 
-Home: http://haven.tidyverse.org, https://github.com/tidyverse/haven, https://github.com/WizardMac/ReadStat
+Home: http://haven.tidyverse.org, https://github.com/WizardMac/ReadStat
 
 Package license: MIT
 
 Summary: Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.
+
+Development: https://github.com/tidyverse/haven
 
 Current build status
 ====================
@@ -252,5 +256,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
