@@ -59,7 +59,7 @@ requirements:
     - r-tibble
     - r-tidyselect
     - r-vctrs >=0.3.0
-    - libzlib
+    - zlib
   run:
     - r-base
     - r-cli >=3.0.0
